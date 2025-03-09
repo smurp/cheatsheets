@@ -1,0 +1,116 @@
+#+TITLE: ORG-MODE TODO MANAGEMENT CHEAT SHEET
+#+OPTIONS: toc:nil num:nil author:nil creator:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [8pt,landscape,letterpaper]
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage[small]{titlesec}
+#+LATEX_HEADER: \pagestyle{empty}
+#+LATEX_HEADER: \AtBeginDocument{\begin{multicols}{3}\footnotesize}
+#+LATEX_HEADER: \AtEndDocument{\end{multicols}}
+
+* Basic TODO Operations
+| Action              | Command                  |
+|---------------------+--------------------------|
+| Create a TODO       | =* TODO Task description= |
+| Cycle TODO states   | =C-c C-t=                |
+| Direct to TODO state | =C-c C-t t=              |
+| Direct to DONE state | =C-c C-t d=              |
+| Insert new TODO     | =M-Shift-RET=            |
+| Toggle checkbox     | =C-c C-c=                |
+
+* TODO Customization (init.el)
+#+begin_src emacs-lisp
+;; Custom TODO states
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "IN-PROGRESS(p)" 
+                  "WAITING(w)" "DONE(d)")))
+
+;; Different colors for states
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning)
+        ("IN-PROGRESS" . "orange")
+        ("WAITING" . "purple")
+        ("DONE" . "green")))
+#+end_src
+
+* Priorities & Tags
+| Action         | Command                      |
+|----------------+------------------------------|
+| Set priority   | =* TODO [#A] Task=            |
+| Cycle priority | =C-c ,=                      |
+| Add tags       | =* TODO Task :work:urgent:=   |
+| Set/edit tags  | =C-c C-q=                    |
+
+* Dates & Scheduling
+| Action             | Command       |
+|--------------------+---------------|
+| Set deadline       | =C-c C-d=      |
+| Schedule task      | =C-c C-s=      |
+| Add timestamp      | =C-c .=        |
+| Add time range     | =C-c C-x C-r=  |
+| Change date at point | =S-<arrow>=   |
+
+* Checkboxes
+| Action                  | Command     |
+|-------------------------+-------------|
+| Create checkbox         | =- [ ] Subtask= |
+| Toggle checkbox         | =C-c C-c=    |
+| Create checkbox list stats | =[/]= or =[%]= |
+
+Example:
+: - [ ] Task [0/2] [0%]
+:   - [ ] Subtask A
+:   - [ ] Subtask B
+
+* Viewing & Finding TODOs
+| Action              | Command              |
+|---------------------+----------------------|
+| Agenda menu         | =C-c a=               |
+| Today's agenda      | =C-c a t=             |
+| Weekly agenda       | =C-c a a=             |
+| All TODOs           | =C-c a T=             |
+| Match by tag        | =C-c a m=             |
+| Sparse tree of TODOs | =C-c / t=             |
+| Filter by tag       | =/= then =t= in agenda |
+
+* Structure & Navigation
+| Action                | Command              |
+|-----------------------+----------------------|
+| Fold/unfold subtree   | =TAB=                 |
+| Global fold/unfold    | =Shift-TAB=           |
+| Move subtree up/down  | =M-↑= / =M-↓=         |
+| Promote/demote heading | =M-←= / =M-→=         |
+| Promote/demote subtree | =M-S-←= / =M-S-→=     |
+
+* Clocking Time
+| Action               | Command       |
+|----------------------+---------------|
+| Clock in             | =C-c C-x C-i=  |
+| Clock out            | =C-c C-x C-o=  |
+| Display clock report | =C-c C-x C-r=  |
+
+* Batch Processing
+| Action             | Command               |
+|--------------------+-----------------------|
+| Bulk state change  | Mark (=m=) then =B s=  |
+| Archive done tasks | =C-c C-x C-a=         |
+| Refile task        | =C-c C-w=             |
+
+* Example TODO Structure
+: * Projects
+: ** TODO Implement New Feature [#A] :project:
+:    DEADLINE: <2025-03-15 Sat>
+:    - [ ] Research [0/2]
+:      - [ ] Review documentation
+:      - [ ] Check GitHub issues
+:    - [ ] Write tests
+:    - [ ] Document approach
+: ** IN-PROGRESS Refactor Login System :maintenance:
+:    SCHEDULED: <2025-03-12 Wed>
+
+# Local Variables:
+# org-export-with-toc: nil
+# org-export-with-author: nil
+# org-export-with-creator: nil
+# End:
