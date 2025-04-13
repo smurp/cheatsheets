@@ -16,10 +16,11 @@ The PDF files include footer links back to the corresponding GitHub-rendered Org
 
 - **rTorrent**: A terminal-based BitTorrent client cheatsheet
   - [Org Source](rtorrent-ux.org)
-  - [PDF Version](rtorrent-ux.pdf)
+  - [PDF Version](./raw/main/rtorrent-ux.pdf)
+
 - **Org-Mode TODO**: Org-Mode's TODO Management features
   - [Org Source](org-mode-todo.org)
-  - [PDF Version](org-mode-todo.pdf)
+  - [PDF Version](./raw/main/org-mode-todo.pdf)
 
 ## Usage
 
@@ -59,4 +60,3 @@ Please submit a pull request with your changes or additions.
 ## License
 
 These cheatsheets are available under the [Creative Commons CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) license (CC0 1.0 Public Domain Dedication). This effectively places the content into the public domain, allowing anyone to use, modify, and distribute the material for any purpose without any restrictions.
-
