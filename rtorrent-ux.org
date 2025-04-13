@@ -1,0 +1,140 @@
+#+TITLE: RTORRENT UX
+#+SUBTITLE: CHEAT SHEET
+#+OPTIONS: toc:nil num:nil author:nil creator:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [8pt,landscape,letterpaper]
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage[small]{titlesec}
+#+LATEX_HEADER: \pagestyle{empty}
+#+LATEX_HEADER: \AtBeginDocument{\begin{multicols}{3}\footnotesize}
+#+LATEX_HEADER: \AtEndDocument{\end{multicols}\vfill\centering\footnotesize{https://github.com/smurp/cheatsheet/rtorrent-ux.org}}
+#+LATEX_HEADER: \usepackage{nopageno}
+
+* Screen Layout Navigation
+| Action                    | Command       |
+|---------------------------+---------------|
+| Switch to main view       | =1=           |
+| Switch to name view       | =2=           |
+| Switch to started view    | =3=           |
+| Switch to stopped view    | =4=           |
+| Switch to complete view   | =5=           |
+| Switch to incomplete view | =6=           |
+| Switch to hashing view    | =7=           |
+| Switch to seeding view    | =8=           |
+| Switch to active view     | =9=           |
+| Switch to next view       | =Right Arrow= |
+| Switch to previous view   | =Left Arrow=  |
+
+* Cursor Movement
+| Action             | Command     |
+|--------------------+-------------|
+| Move up in list    | =Up Arrow=  |
+| Move down in list  | =Down Arrow= |
+| Scroll page up     | =Page Up=   |
+| Scroll page down   | =Page Down= |
+| Jump to first item | =Home=      |
+| Jump to last item  | =End=       |
+
+* Detailed Views
+| Action                  | Command            |
+|-------------------------+--------------------|
+| Toggle info panel       | =i=                |
+| Cycle through info panels | =i= (repeatedly)  |
+| View torrent peers      | =p=                |
+| View torrent trackers   | =t=                |
+| View torrent files      | =f=                |
+| Return to main view     | =<= or =Back Space= |
+| Toggle collapsed/expanded view | =*=         |
+
+* Info Panel Screens
+| Panel Type       | Information Displayed                    |
+|------------------+------------------------------------------|
+| Info (1st press) | General, path, size, timestamps          |
+| Info (2nd press) | Transfer rates, peers, chunks            |
+| Info (3rd press) | Performance metrics, memory usage        |
+| Peer View        | Connected peers, client, address, speeds |
+| Tracker View     | Tracker URLs, status, update interval    |
+| File View        | File list, sizes, priorities             |
+
+* File View Operations
+| Action                       | Command |
+|------------------------------+---------|
+| Select/deselect file         | =Space= |
+| Set high priority            | =a=     |
+| Set normal priority          | =n=     |
+| Set no download (off)        | =z=     |
+| Set high priority for all    | =A=     |
+| Set normal priority for all  | =N=     |
+| Set no download for all      | =Z=     |
+
+* Keyboard Throttle Control
+| Action                     | Command |
+|----------------------------+---------|
+| Increase global upload     | =a=     |
+| Decrease global upload     | =s=     |
+| Increase global download   | =d=     |
+| Decrease global download   | =z=     |
+| Increase max peers         | =A=     |
+| Decrease max peers         | =S=     |
+| Increase min peers         | =D=     |
+| Decrease min peers         | =Z=     |
+
+
+* Status Indicators
+| Indicator | Meaning                        |
+|-----------+--------------------------------|
+| =*=       | Currently downloading/seeding  |
+| =+=       | Complete, still seeding        |
+| =-=       | Stopped                        |
+| =h=       | Hash checking in progress      |
+| =!=       | Error state                    |
+| =msg=     | Message from tracker/peers     |
+
+#+LATEX: \columnbreak
+* Command Mode
+| Action                   | Command                       |
+|--------------------------+-------------------------------|
+| Enter command mode       | =:=                           |
+| Execute rtorrent command | =:command_name=args=          |
+| Execute system command   | =:execute=command,arg1,arg2...= |
+| Cancel command mode      | =Esc=                         |
+
+* Status Bar Elements
+| Component               | Description                             |
+|------------------------+-----------------------------------------|
+| Upper Left             | Global upload/download speeds            |
+| Upper Right            | Memory usage                             |
+| Lower Left             | Throttle settings (upload/download)      |
+| Lower Center           | Number of torrents (complete/incomplete) |
+| Lower Right            | System time                              |
+
+* Columns Display (Default View)
+| Column     | Description                         |
+|------------+-------------------------------------|
+| 1          | Status indicator                    |
+| 2          | Name                                |
+| 3          | Up rate                             |
+| 4          | Down rate                           |
+| 5          | Done percentage                     |
+| 6          | Size                                |
+| 7          | Peers (connected/max)               |
+| 8          | Priority                            |
+
+* Example Screen Layout
+: +-----------------------------------------------------+
+: | [Throttle 500/2000] [D:34.5 KB/s] [U:89.2 KB/s]     |
+: +-----------------------------------------------------+
+: | * ubuntu-24.04.iso                  96%    1.2 GB   |
+: | + debian-12.2.iso                   100%   932 MB   |
+: | - fedora-39.iso                     45%    2.4 GB   |
+: | * arch-linux-2023.iso               12%    764 MB   |
+: +-----------------------------------------------------+
+: |[Throttle: 100/0] [Tot: 5(2/3)] |
+: +-----------------------------------------------------+
+
+# Local Variables:
+# org-export-with-toc: nil
+# org-export-with-author: nil
+# org-export-with-creator: nil
+# End:

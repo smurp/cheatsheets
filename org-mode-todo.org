@@ -1,4 +1,5 @@
-#+TITLE: ORG-MODE TODO MANAGEMENT CHEAT SHEET
+#+TITLE: ORG-MODE TODO MANAGEMENT
+#+SUBTITLE: CHEAT SHEET
 #+OPTIONS: toc:nil num:nil author:nil creator:nil
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [8pt,landscape,letterpaper]
@@ -7,7 +8,8 @@
 #+LATEX_HEADER: \usepackage[small]{titlesec}
 #+LATEX_HEADER: \pagestyle{empty}
 #+LATEX_HEADER: \AtBeginDocument{\begin{multicols}{3}\footnotesize}
-#+LATEX_HEADER: \AtEndDocument{\end{multicols}}
+#+LATEX_HEADER: \AtEndDocument{\end{multicols}\vfill\centering\footnotesize{https://github.com/smurp/cheatsheet/org-mode-todo.org}}
+#+LATEX_HEADER: \usepackage{nopageno}
 
 * Basic TODO Operations
 | Action              | Command                  |
