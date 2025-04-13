@@ -17,7 +17,7 @@ The PDF files include footer links back to the corresponding GitHub-rendered Org
 - **rTorrent**: A terminal-based BitTorrent client cheatsheet
   - [Org Source](rtorrent-ux.org)
   - [PDF Version](rtorrent-ux.pdf)
-- **Org-Mode TODO Management**: Org-Mode's TODO
+- **Org-Mode TODO**: Org-Mode's TODO Management features
   - [Org Source](org-mode-todo.org)
   - [PDF Version](org-mode-todo.pdf)
 
