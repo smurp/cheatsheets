@@ -14,13 +14,10 @@ The PDF files include footer links back to the corresponding GitHub-rendered Org
 
 ## Current Cheatsheets
 
-- **rTorrent**: A terminal-based BitTorrent client cheatsheet
-  - [Org Source](rtorrent-ux.org)
-  - [PDF Download](../../raw/main/rtorrent-ux.pdf)
-
-- **Org-Mode TODO**: Org-Mode's TODO Management features
-  - [Org Source](org-mode-todo.org)
-  - [PDF Download](../../raw/main/org-mode-todo.pdf)
+| Title | Description | Source | Download |
+|-------|-------------|--------|----------|
+| **rTorrent** | A terminal-based BitTorrent client cheatsheet | [.org](rtorrent-ux.org) | [.pdf](../../raw/main/rtorrent-ux.pdf) |
+| **Org-Mode TODO** | Org-Mode's TODO Management features | [.org](org-mode-todo.org) | [.pdf](../../raw/main/org-mode-todo.pdf) |
 
 ## Usage
 
