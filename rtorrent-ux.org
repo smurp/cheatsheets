@@ -8,7 +8,7 @@
 #+LATEX_HEADER: \usepackage[small]{titlesec}
 #+LATEX_HEADER: \pagestyle{empty}
 #+LATEX_HEADER: \AtBeginDocument{\begin{multicols}{3}\footnotesize}
-#+LATEX_HEADER: \AtEndDocument{\end{multicols}\vfill\centering\footnotesize{https://github.com/smurp/cheatsheet/rtorrent-ux.org}}
+#+LATEX_HEADER: \AtEndDocument{\end{multicols}\vfill\centering\footnotesize{https://github.com/smurp/cheatsheets/blob/main/rtorrent-ux.org}}
 #+LATEX_HEADER: \usepackage{nopageno}
 
 * Screen Layout Navigation

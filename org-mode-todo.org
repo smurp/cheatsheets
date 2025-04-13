@@ -8,7 +8,7 @@
 #+LATEX_HEADER: \usepackage[small]{titlesec}
 #+LATEX_HEADER: \pagestyle{empty}
 #+LATEX_HEADER: \AtBeginDocument{\begin{multicols}{3}\footnotesize}
-#+LATEX_HEADER: \AtEndDocument{\end{multicols}\vfill\centering\footnotesize{https://github.com/smurp/cheatsheet/org-mode-todo.org}}
+#+LATEX_HEADER: \AtEndDocument{\end{multicols}\vfill\centering\footnotesize{https://github.com/smurp/cheatsheets/blob/main/org-mode-todo.org}}
 #+LATEX_HEADER: \usepackage{nopageno}
 
 * Basic TODO Operations
@@ -25,7 +25,7 @@
 #+begin_src emacs-lisp
 ;; Custom TODO states
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN-PROGRESS(p)" 
+      '((sequence "TODO(t)" "IN-PROGRESS(p)"
                   "WAITING(w)" "DONE(d)")))
 
 ;; Different colors for states
